@@ -1,4 +1,5 @@
 @use 'variaveis';
+@use 'header';
 @use 'hero';
 @use 'shows';
 @use 'plans';
@@ -23,6 +24,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 
 
@@ -73,17 +76,46 @@ body{
 }
 
 .button{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 18px;
     color: variaveis.$corTextoSecundario;
-    background: #6421ff;
+    background: variaveis.$corDoBotaoPrimario;
     border: none;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDoBotaoPrimario;
+
+
+
+    &:hover{
+        background: lighten(variaveis.$corDoBotaoPrimario, 3%);
+    }
+
+
+    &--secondary{
+        background: variaveis.$corDoBotaoSecundario;
+        border-color: variaveis.$corDoBotaoSecundario;
+
+        &:hover{
+            background: lighten(variaveis.$corDoBotaoSecundario, 3%);
+        }
+    }
+
+    &--dark{
+        background: rgba(variaveis.$corDoBotaoDark, 0.8);
+        border-color: variaveis.$corTextoSecundario;
+
+        &:hover{
+            background: variaveis.$corTextoSecundario;
+            color: variaveis.$corDeFundo;
+        }
+    }
 }
 
 .image-text-section{
