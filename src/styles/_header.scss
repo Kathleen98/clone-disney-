@@ -30,12 +30,20 @@
         justify-content: space-between;
         align-items: center;
 
+        @media(max-width: 768px){
+            padding: 0 12px 0 20px;
+        }
+
     }
 
     &__logo{
         max-width: 80px;
         width: 100%;
         transition: opacity .5s ease;
+
+        @media(max-width: 768px){
+            max-width: 64px;
+        }
     }
 
     &__links{
@@ -49,6 +57,14 @@
 
     .button{
         height: 50px;
+
+        @media(max-width: 768px){
+            font-size: 13px;
+            padding: 8px 11px;
+            height: 40px;
+            letter-spacing: 0;
+
+        }
     }
 }
 

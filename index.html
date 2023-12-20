@@ -10,7 +10,7 @@
 <body>
     <header class="header">
         <div class="header__container">
-            <h1 class="">
+            <h1>
                 <img class="header__logo" src="./dist/images/disneyplus.svg" alt="Display+">
             </h1>
             <ul class="header__links">
@@ -187,7 +187,10 @@
     </section>
 
     <section class="image-text-section image-text-section--image-full-width">
-        <img src="./dist/images/fundo_rei_leao.png" alt="Rei Leão">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./dist/images/fundo_rei_leao_celular.png"/>
+            <img src="./dist/images/fundo_rei_leao.png" alt="Rei Leão">
+        </picture>
         <div class="image-text-section__text_container image-text-section--image-full-width__text_container">
             <h2 class="title">
                 Baixe filmes e séries
